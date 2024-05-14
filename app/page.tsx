@@ -1,15 +1,5 @@
-import { DM_Serif_Text, IBM_Plex_Sans } from "next/font/google";
 import Image from "next/image";
-
-const mainFont = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-});
-const serifFont = DM_Serif_Text({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["italic", "normal"],
-});
+import { mainFont, serifFont } from "./layout";
 
 export default function Home() {
   return (
@@ -46,7 +36,7 @@ export default function Home() {
                 Mubeen Naeem{" "}
               </h1>
               <p
-                className={`text-red mt-4 text-xl font-semibold italic ${serifFont.className}`}
+                className={`text-red mt-4 text-xl italic ${serifFont.className}`}
               >
                 <span>UI designer</span>
                 <span className="text-black"> & </span>
